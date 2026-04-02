@@ -1,4 +1,17 @@
-export const metadata = { title: 'Flowcid Lab', description: 'Clinical Registry Automation' };
+import './globals.css';
+import { Inter } from 'next/font/google';
+
+const inter = Inter({ subsets: ['latin'] });
+
+export const metadata = {
+  title: 'Flowcid Lab | Clinical Registry Automation',
+  description: 'QR digital forms, AI extraction, and clinician review for clinical registry workflows',
+};
+
 export default function RootLayout({ children }: { children: React.ReactNode }) {
-  return <html lang="en"><body>{children}</body></html>;
+  return (
+    <html lang="en">
+      <body className={inter.className}>{children}</body>
+    </html>
+  );
 }
